@@ -1,0 +1,281 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>Mauritius</title>
+  <link rel="stylesheet" href="css/Masterpage.css">
+  </link>
+  <style>
+    h1 {
+      color: #fff;
+      background-color: #7b0099;
+      text-shadow: 1px 1px 2px #111;
+      width: 30%;
+      padding: 3px 0 3px 0;
+      font-style: Open sans, Arial;
+      text-transform: uppercase;
+      box-shadow: 2px 2px 3px #111;
+    }
+
+    div.c {
+      z-index: -1;
+      height: 118%;
+    }
+
+    td {
+      color: white;
+      text-shadow: 1px 1px black;
+      font-weight: bold;
+      font-size: 25px;
+    }
+
+    .formbox {
+      width: 97%;
+      margin: auto;
+      height: 91%;
+      padding: 10px 10px;
+      box-sizing: border-box;
+      background: #111;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+    }
+
+    .formbox p {
+      margin-left: 50px;
+      padding: 0;
+      font-weight: bold;
+      color: #fff;
+      letter-spacing: 0.1em;
+    }
+
+    .formbox input {
+      margin-bottom: 20px;
+    }
+
+    .formbox input[type="text"],
+    .formbox input[type="password"],
+    .formbox input[type="number"] {
+      border: none;
+      background: #111;
+      border-bottom: 2px solid #fff;
+      outline: none;
+      width: 70%;
+      color: white;
+      margin-left: 50px;
+      height: 30px;
+    }
+
+    ::placeholder {
+      color: #bbb;
+    }
+
+
+    .formbox input[type="text"]:focus,
+    .formbox input[type="password"]:focus,
+    .formbox input[type="number"]:focus {
+      border-bottom: 2px solid #7b0099;
+      color: white;
+      font-weight: bold;
+    }
+
+    .formbox input[type="radio"]:focus {
+      color: #7b0099;
+    }
+
+    .formbox form input[type="submit"] {
+      display: block;
+      padding: 12px 150px;
+      border-radius: 40px;
+      box-shadow: none;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      background: #333;
+      color: #fff;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, .5);
+    }
+
+    .formbox form input[type="submit"]:hover {
+      background: #7b0099;
+      transition-duration: 0.5s;
+    }
+
+    /*image packages start*/
+    div.imgPackage {
+      height: 300px;
+      width: 300px;
+      display: inline-block;
+      margin: 10px;
+      background-size: cover;
+      border-radius: 16px;
+      box-shadow: 0 0 16px rgba(0, 0, 0, 0.5);
+      position: relative;
+    }
+  div.imgPackage *{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+  }
+  div.imgPackage div {
+    z-index: 1;
+    color: #fff;
+    text-align: left;
+    padding: 8px;
+    padding-left: 10%;
+    padding-top: 5%;
+    font-size: 18px;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 16px;
+  }
+  .selectPack {
+    z-index: 1;
+    display: block;
+    margin-left: 10%;
+    margin-top: 70%;
+    margin-bottom: 5%;
+    padding: 1px 100px;
+    border-radius: 40px;
+    box-shadow: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: #333;
+    opacity: 0.3;
+    color: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .5);
+  }
+  .selectPack:hover {
+    opacity: 1;
+    background-color: #7b0099;
+    transition: 0.4s;
+  }
+    /*image packages start*/
+  </style>
+</head>
+
+<body>
+  <!-- login form -->
+  <?php
+		session_start();
+		include 'login.php';
+		error_reporting();
+	 ?>
+  <!-- login form end -->
+  <div>
+    <ul class="home">
+      <li><a href="homepage.php" class="anchor">HOME</a></li>
+      <!-- dropdown-->
+      <li class="dropdown"><a class="dropbtn">ACTIVITIES</a>
+        <div class="dropdown-content">
+          <a href="#">MAURITIUS</a>
+          <a href="#">AUSTRALIA</a>
+          <a href="#">JAPAN</a>
+          <a href="#">MALAYSIA</a>
+          <a href="#">SINGAPORE</a>
+          <a href="#">THAILAND</a>
+          <a href="#">HONG KONG</a>
+          <a href="#">PARIS</a>
+        </div>
+      </li>
+      <!-- dropdown end -->
+      <li><a href="contact us.php" class="anchor">CONTACT US</a></li>
+      <li><a href="" class="anchor">ABOUT US</a></li>
+      <!--the username display start-->
+      <li>
+        <div class="u_name">
+          <div class="u_name2">
+            <?php   echo $_SESSION['user_name']; ?></div>
+        </div>
+      </li>
+      <!--the username display end-->
+
+      <!-- logout form here -->
+      <li>
+        <div class="container">
+          <a href="Log_in.php">
+            <div class="logout">LOG OUT</div>
+          </a>
+        </div>
+      </li>
+      <!-- logout form end here -->
+      <li style="float:right; background-color:#7B0099; color:white;text-align:center; padding:12px 12px;text-width:bold; font-family:'comic sans ms';text-shadow:2px 2px black">STAR TRAVELS</li>
+    </ul>
+  </div>
+
+  <img src="images/Mauritius_3.jpg" height=400px width=100% style="margin-top:3%;">
+
+  <div class="b">
+    <ul>
+      <li><a href="Mauritius_images.php" class="sidebar">MAURITIUS</a></li>
+      <li><a href="Australia_images.php" class="sidebar">AUSTRALIA</a></li>
+      <li><a href="Mauritius_images.php" class="sidebar">THAILAND</a></li>
+      <li><a href="Mauritius_images.php" class="sidebar">SINGAPORE</a></li>
+      <li><a href="Mauritius_images.php" class="sidebar">MALAYSIA</a></li>
+      <li><a href="Mauritius_images.php" class="sidebar">PARIS</a></li>
+      <li><a href="Mauritius_images.php" class="sidebar">HONG KONG</a></li>
+      <li><a href="Mauritius_images.php" class="sidebar">JAPAN</a></li>
+
+    </ul>
+
+  </div>
+  <div class="c">
+    <center>
+      <h1>MAURITIUS</h1>
+    </center>
+    <div class="formbox">
+      <!-- form start-->
+      <form action="Sign_up.php" method="post">
+        <p><label>Name: </label></p>
+        <input type="text" name="first_name" placeholder="Enter your first name" required>
+        <p><label>E-mail ID: </label></p>
+        <input type="text" name="email_id" id="email_id" placeholder="Enter your E-mail" required>
+        <p><label>Number of People: </label></p>
+        <input type="number" name="mobile_number" placeholder="Number of People" required>
+        <!-- image select start-->
+        <p><label>Select Package: </label></p>
+        <div class="imageSet">
+          <div class="imgPackage" style="background-image: url('images/mau1.jpg');">
+            <div class="package1">
+                Sites to Visit: Trou Aux Biches,Tamarind Waterfalls and Moka. <br>
+                Duration: 1N/2D <br>
+                Hotel: 4star <br>
+                Price: Rs.48,000 (Per Person) <br>
+                <button class="selectPack" name="selectPack" value="48000" onclick="packofTheCentuary()">Select</button>
+            </div>
+
+          </div>
+          <div class="imgPackage" style="background-image: url('images/mau1.jpg');">
+            <div class="package2">
+              Sites to Visit: Trou Aux Biches,Tamarind Waterfalls,Moka and Mauritius Aquarium <br>
+              Duration: 2N/3D <br>
+              Hotel: 4star <br>
+              Price: Rs.60,000 (Per Person) <br>
+              <button class="selectPack" name="selectPack" value="60000" onclick="packofTheCentuary()">Select</button>
+            </div>
+          </div>
+          <div class="imgPackage" style="background-image: url('images/mau1.jpg');">
+            <div class="package3">
+              Sites to Visit: Trou Aux Biches,Tamarind Waterfalls,Moka,Mauritius Aquarium,Sugar Museum and Parc Francois Leguat <br>
+              Duration: 4N/5D <br>
+              Hotel: 4star <br>
+              Price: Rs.67,000 (Per Person) <br>
+              <button class="selectPack" name="selectPack" value="67000" onclick="packofTheCentuary()">Select</button>
+            </div>
+          </div>
+        </div>
+        <!-- image select end-->
+        <center>
+          <input type="submit" name="save" value="Submit" onclick="">
+        </center>
+        <br>
+      </form>
+
+      <!-- form end-->
+    </div>
+  </div>
+</body>
+<script src="jQuery/jquery.js"></script>
+
+<html>
